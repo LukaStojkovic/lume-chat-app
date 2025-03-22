@@ -42,7 +42,7 @@ const ProfilePage = () => {
           <CardContent className="flex flex-col items-center gap-4">
             <div className="relative">
               <img
-                src={selectedImage || authUser.profilePicture || "/avatar.jpg"}
+                src={selectedImage || authUser?.profilePicture || "/avatar.jpg"}
                 className="size-32 rounded-full object-cover border-4 border-neutral-400 dark:border-neutral-600"
               />
               <label
@@ -98,7 +98,7 @@ const ProfilePage = () => {
             <div className="space-y-3 text-sm text-neutral-500 dark:text-neutral-400">
               <div className="flex items-center justify-between py-2 border-b border-zinc-700 dark:border-neutral-600">
                 <span>Member Since</span>
-                <span>{authUser.createdAt?.split("T")[0]}</span>
+                <span>{authUser?.createdAt?.split("T")[0]}</span>
               </div>
               <div className="flex items-center justify-between py-2">
                 <span>Account Status</span>

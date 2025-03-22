@@ -10,7 +10,6 @@ export const checkAuth = createAsyncThunk(
 
       return res.data;
     } catch (err) {
-      console.log("Error in checkAuth: ", err);
       return rejectWithValue(err.response?.data || "Unknown error");
     }
   }
